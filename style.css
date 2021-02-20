@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Zilla+Slab&display=swap');
+
+
+/* 
+font-family: 'Pacifico', cursive;
+font-family: 'Zilla Slab', serif;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--fontall:'Zilla Slab', serif;
+--font:'Pacifico', cursive;
+}
+
+a{
+    text-decoration: none;
+    /* color: #222222; */
+}
+
+body{
+    font-family: var(--fontall);
+}
+p{
+    font-family: var(--font);
+}
+/* Header */
+
+#header{
+position: fixed;
+top: 0;
+display: flex;
+justify-content: space-between;
+width: 100%;
+padding: 1rem 1.5rem;
+background-color: rgba(16, 15, 26, 0.952);
+z-index: 20;
+}
+#header > a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header > a span{
+    margin-left: 0.5rem;
+    font-family: var(--font);
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+#header a{
+    color: white;
+}
+
+#header-img{
+    width: 40px;
+    height: 40px;
+}
+
+#nav-bar{
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.nav-link{
+    padding: 0 1rem;
+    font-family: var(--font);
+    letter-spacing: 1px;
+}
+
+/* description */
+.description{
+    margin-top: 100px;
+    padding: 1rem 1rem;
+    text-align: center;
+    
+}
+#form{
+    padding: 1rem 0;
+    font-family: var(--font);
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type="email"]{
+    height: 2rem;
+    outline: none;
+    border: 2px solid rgb(39, 37, 170);
+    padding-left: 0.5rem;
+    border-radius: 0.25rem;
+    width: 300px;
+    font-family: var(--font);
+}
+input[type="email"]:focus{
+    font-family: var(--font);
+}
+input::placeholder{
+    font-family: var(--font);
+}
+
+#submit{
+    padding: 0.2rem 1.5rem ;
+    margin-left: 1rem;
+    font-family: var(--font);
+    border: 2px solid rgb(39, 37, 170);
+    border-radius: 0.25rem;
+}
+
+/* features */
+#features{
+    padding: 15rem 2.5rem;
+    position: relative;
+    
+}
+.container{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+.icon{
+    font-size: 2rem;
+    align-self: flex-start;
+    margin-right: 2rem;
+    color: darkorange;
+}
+.fixer{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* looks */
+#looks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+/* pricing */
+#pricing{
+    margin: 3rem 0;
+    padding: 4rem 3rem;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(12, 149, 92, 0.767);
+    flex-wrap: wrap;
+}
+.cards{
+    border: 2px solid;
+    padding: 3rem 5rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    flex-basis: 300;
+    margin-bottom: 1.5rem;
+}
+.cards h1{
+    border-bottom: 2px solid orange;
+}
+.cards h1 + p{
+    transform: scale(2);
+    padding: 0.5rem 0;
+}
+.cards > a{
+    display: inline-block;
+    margin: 0.8rem 0;
+    padding: 0.5rem 1rem;
+    background-color: orange;
+    font-weight: 550;
+    color: white;
+
+}
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    background-color: #222;
+}
+.credit a{
+    color: white;
+    padding: 0 1rem;
+}
+
+
+/* media query for 650px */
+@media (max-width:650px){
+    #header{
+        flex-direction: column;
+        justify-self: center;
+    }
+    #header a{
+        display: flex;
+        margin: 0.3rem auto;
+    }
+    .description{
+        margin-top: 170px;
+        
+    }
+    .items{
+        flex-direction: column;
+    }
+    #submit{
+        margin-top: 0.5rem;
+    }
+    .fixer{
+        width: 90%;
+    }
+    .container{
+        border: 1px solid orangered;
+        border-radius: 0.25rem;
+        padding: 0.25rem;
+    }
+    .icon{
+        display:none;
+    }
+  
+}
+@media (max-width:300px){
+    .cards{
+        flex-basis: 200;
+    }
+}
