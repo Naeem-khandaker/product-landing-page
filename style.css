@@ -24,6 +24,7 @@ a{
 
 body{
     font-family: var(--fontall);
+    scroll-behavior: smooth;
 }
 p{
     font-family: var(--font);
