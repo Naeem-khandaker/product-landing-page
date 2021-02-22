@@ -165,7 +165,7 @@ input::placeholder{
     padding: 3rem 5rem;
     border-radius: 0.25rem;
     text-align: center;
-    flex-basis: 300;
+    flex:0 0 300px;
     margin-bottom: 1.5rem;
 }
 .cards h1{
